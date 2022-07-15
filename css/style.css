@@ -1,0 +1,1459 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Courier+Prime:wght@400;700&family=Fanwood+Text&family=Poppins:wght@100;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+
+    /* color */
+    --orange : rgb(244, 123, 24);
+    --hitam : rgb(0, 0, 0);
+    --putih : rgb(255,255,255);
+    --hijau : rgb(27, 217, 57);
+    --abu : #eee;
+
+     /* font family */
+    --popins : 'Poppins', sans-serif;
+    --courier : 'Courier Prime', monospace;;
+}
+
+body.dark{
+    --orange : rgb(244, 123, 24);
+    --hitam : rgb(255,255,255);
+    --putih : rgb(60, 44, 37);
+    --hijau : rgb(27, 217, 57);
+    --abu : rgb(89, 76, 69);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--popins);
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+/* navbar styling */
+
+
+/* header started */
+header{
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    z-index: 9999999;
+    transition: 1s ease all;
+}
+
+header.active{
+    background-color: var(--orange);
+}
+
+header .navbarTitle h1{
+    font-size: 2.5em;
+    color: var(--hitam);
+}
+
+header .navbarList a{
+    margin: 0 15px;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: var(--hitam);
+    transition: .7s ease all;
+}
+
+.putih{
+    background-color: var(--putih);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header .navbarList a:hover{
+    color: var(--orange);
+}
+
+header .aktif{
+    background-color: var(--orange);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header .fa-burger{
+    color: var(--orange);
+    transition: 1s ease all;
+}
+
+header .navbarDark i{
+    font-size: 1.8em;
+    background-color: var(--orange);
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+header .navbarDark i:hover{
+    transform: rotate(360deg) scale(1.3);
+}
+
+header .fa-bars{
+    margin-right: 10px;
+    display: none;
+}
+
+/* header finished */
+
+
+/* benner started */
+
+.benner{
+    height: 100vh;
+    background-color: var(--orange);
+    width: 100%;
+}
+
+.benner .gambar{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+
+.benner .gambar img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.benner .gambar .benner-text{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+}
+
+.benner h1{
+    font-family: var(--courier);
+    font-size: 4em;
+    color: var(--hitam);
+}
+
+.benner h2{
+    font-family: var(--popins);
+    font-size: 5em;
+    color: var(--hitam);
+}
+
+.benner a{
+    display: block;
+    background-color: var(--abu);
+    width: fit-content;
+    padding: 7px 26px;
+    border-radius: 5px;
+    color: var(--hitam);
+    text-decoration: none;
+    font-size: 1.4em;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.1);
+    margin: 10px 0 20px 0;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.benner strong{
+    font-size: 1.3em;
+    color: var(--hitam);
+}
+
+.benner .icons{
+    display: flex;
+}
+
+.benner .icons .icon{
+    margin-right:15px;
+    margin-top: 5px;
+    font-size: 1.7em;
+    transition: 1s ease all;
+    cursor: pointer;
+    color: var(--hitam);
+}
+
+.benner .icons .icon:hover{
+    transform: rotate(360deg);
+}
+.benner p{
+    color: var(--hitam);
+    font-size: 1.2em;
+    line-height: 20px;
+}
+/* finished bener */
+
+
+/* popular start */
+
+.popular{
+    background-color: var(--abu);
+    padding: 80px 50px;
+}
+
+.popular .popularTitle{
+    text-align: center;
+}
+
+.popular strong{
+    color: var(--orange);
+    font-size: 1.5em;
+    font-family: var(--courier);
+}
+
+.popular h2{
+    font-size: 2.3em;
+    font-family: var(--courier);
+    letter-spacing: 2px;
+    margin: 5px 0;
+    color: var(--hitam);
+}
+
+.popular .row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.popular .row .col{
+    width: 30%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.popular .row .col .card{
+    display: flex;
+    background-color: var(--putih);
+    border-radius: 7px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.1);
+}
+
+.popular .row .col .card .left{
+    width: 60%;
+}
+
+.popular .row .col .card .right{
+    width: 40%;
+    padding: 20px 10px 0;
+    text-align: left;
+}
+
+.popular .row .col .card .left .images{
+    width: 100%;
+    height: 100%;
+}
+
+.popular .row .col .card:hover img {
+    transform: scale(1.1);
+}
+
+.popular .row .col .card .left .images img{ 
+    width: 100%;
+    height: 100%;
+    transition: 1s ease all;
+}
+
+
+.fa-star, .fa-star-half-stroke{
+    color: var(--orange);
+}
+
+.dolar{
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.popular hr{
+    margin: 5px 0;
+}
+
+.popular .row .col .card .right h3{
+    color: var(--hitam);
+    font-size: 2em;
+}
+
+.popular .row .col .card .right a{
+    text-decoration: none;
+    color: var(--putih);
+    background-color: var(--orange);
+    padding: 7px 26px;
+    border-radius: 7px;
+    display: block;
+    width: fit-content;
+    margin: 20px 0;
+    transition: 1s ease all;
+}
+
+.popular .row .col .card .right a:hover{
+    background-color: transparent;
+    border: 1px solid var(--orange);
+    color:var(--orange);
+}
+
+/* popular finieshed */
+
+/* About us started */
+.about{
+    background-color: var(--putih);
+    padding: 80px 20px;
+}
+.about .aboutTitle{
+    text-align: center;
+}
+
+.about .aboutTitle strong{
+    color: var(--orange);
+    font-size: 1.5em;
+    font-family: var(--courier);
+}
+
+.about h2{
+    font-size: 2.3em;
+    font-family: var(--courier);
+    letter-spacing: 2px;
+    margin: 5px 0;
+    color: var(--hitam);
+}
+
+.about .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about main {
+    width: 70%;
+    padding: 20px;
+    position: relative;
+}
+
+.about .aboutText{
+    position: absolute;
+    top: 30px;
+    left: 90px;
+}
+
+.about .aboutText h2{
+    font-weight: 300;
+    font-family: var(--courier);
+    color: var(--orange);
+}
+
+.about .aboutText h1{
+    color: var(--hitam);
+    font-weight: bold;
+    font-size: 3.5em;
+}
+
+.about main .gambar{
+    width: 50%;
+    margin: 0 auto 30px;
+}
+
+.about main .gambar img{
+    width: 100%;
+}
+
+.about main h1{
+    text-align: center;
+    color: var(--hitam);
+    font-weight: 500;
+    font-size: 2.5em;
+   
+}
+
+.about .textRestaurant{
+    position: absolute;
+    top: 120px;
+    right: 60px;
+}
+
+.about .textRestaurant h2{
+    font-weight: 300;
+    font-family: var(--courier);
+    color: var(--orange);
+}
+
+.about .textRestaurant h1{
+    color: var(--hitam);
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.about .textRestaurant strong{
+    color: var(--hitam);
+}
+.about .textRestaurant h1{
+    color: var(--hitam);
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.about main p{
+    text-align: justify;
+    font-size: 1.3em;
+    line-height: 25px;
+    color: var(--hitam);
+}
+
+.about aside{
+    width: 30%;
+}
+
+.about main .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.about main .box .col{
+    width: 30%;
+    margin-top: 20px;
+}
+
+.about main .box a{
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 7px 26px;
+    background-color: var(--abu);
+    text-decoration: none;
+    color: var(--orange);
+    border-radius: 7px;
+    transition: 1s ease all;
+    margin-top: 20px;
+    width: fit-content;
+    display: block;
+}
+
+
+.about main .box a:hover{
+   background-color: var(--orange);
+   color: var(--black);
+}
+
+.about main .box a:hover i{
+   color: var(--hitam);
+}
+
+.about main .box i{
+    color: var(--orange);
+    font-size: 1.5em;
+    transition: 1s ease all;
+}
+
+.about main .button a{
+    text-decoration: none;
+    color: var(--putih);
+    background-color: var(--orange);
+    padding: 7px 36px;
+    border-radius: 7px;
+    display: block;
+    width: fit-content;
+    margin: 30px 20px;
+    transition: 1s ease all;
+    font-size: 1.3em;
+}
+
+.about main .button a:hover{
+    background-color: transparent;
+    border: 1px solid var(--orange);
+    color:var(--orange);
+}
+
+.about aside{
+    padding: 20px;
+    background-color: var(--abu);
+    border-radius: 5px;
+    border-top: 3px solid var(--orange);
+}
+
+.about aside h1{
+    margin: 20px;
+    font-size: 2em;
+    text-align: center;
+    color: var(--orange);
+}
+
+.about aside hr{
+    margin: 10px 0;
+}
+
+.about aside strong{
+    color: var(--orange);
+    font-size: 1.5em;
+    margin-top: 20px;
+    display: block;
+}
+.about aside .gambar{
+    width:150px;
+    margin: 0 auto;
+}
+
+.about aside .gambar img{
+    width:100%;
+    border-radius: 50%;
+    height: 150px;
+}
+
+.about aside p{
+    color: var(--orange);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* About us finished */
+
+
+/* Full menu started */
+
+.fullMenu{
+    background-color: var(--putih);
+    padding: 80px 0;
+}
+
+.fullMenu .fullMenuTitle{
+    text-align: center;
+    padding: 30px;
+}
+
+.fullMenu .fullMenuTitle strong{
+    color: var(--orange);
+    font-size: 1.5em;
+    font-family: var(--courier);
+}
+
+.fullMenu h2{
+    font-size: 2.3em;
+    font-family: var(--courier);
+    letter-spacing: 2px;
+    margin: 5px 0;
+    color: var(--hitam);
+}
+
+.fullMenu .fullMenuKatagori{
+    display: flex;
+    margin: 0 30px;
+}
+
+.showAktif{
+    background-color: var(--abu);
+}
+
+.fullMenu .fullMenuKatagori .menu,
+.fullMenu .fullMenuKatagori .food,
+.fullMenu .fullMenuKatagori .drink,
+.fullMenu .fullMenuKatagori .dessert
+{
+    margin-right: 20px;
+    font-size: 1.5em;
+    padding: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    color: var(--hitam);
+}
+
+.fullMenu .showAll{
+    background-color: var(--abu);
+    padding: 50px;
+}
+
+.fullMenu .showAll h2{
+    text-align: center;
+}
+
+.fullMenu .row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.fullMenu .showAll .row .col{
+    width: 30%;
+    margin-top: 30px;
+}
+
+.fullMenu .row .col .card{
+   background-color: var(--putih);
+   border-radius: 6px;
+   box-shadow: 2px 3px 2px rgba(0,0,0,.1);
+   border-top: 4px solid var(--orange);
+   cursor: pointer;
+   overflow: hidden;
+}
+
+.fullMenu .row .col .card .text{
+  padding: 10px;
+}
+
+.fullMenu .row .col .gambar{
+    width: 100%;
+}
+
+.fullMenu .row .col .gambar img{
+    width: 100%;
+    border-radius: 6px;
+    transition: 1s ease all;
+}
+
+.fullMenu .row .col .card:hover img{
+    transform: scale(1.1);
+}
+
+.fullMenu .row .col .card h1{
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    color: var(--hitam);
+}
+
+.fullMenu .row .col .card .star{
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
+}
+
+.fullMenu .row .col .card p{
+    font-size: 1.3em;
+    margin: 0 0 5px 0;
+    color: var(--hitam);
+}
+
+
+.fullMenu .row .col .card .under{
+    font-size: 1.3em;
+    display: flex;
+    margin: 30px 0 5px 0;
+    justify-content: center;
+}
+
+.fullMenu .row .col .card .under a{
+    text-decoration: none;
+    margin-right: 20px;
+    background-color: var(--orange);
+    padding: 7px 26px;
+    border-radius: 7px;
+    color: var(--black);
+    font-size: 1.2em;
+    border: 1px solid rgba(0,0,0,.1);
+    transition: 1s ease all;
+    margin-left: 20px;
+}
+
+.fullMenu .row .col .card .under a:hover{
+   background-color: var(--abu);
+}
+
+/* Full menu finished */
+
+/* komentar started */
+.komentar{
+    padding: 70px 0;
+    background-color: var(--putih);
+}
+.komentar .komentarTitle{
+    text-align: center;
+}
+
+.komentar .komentarTitle strong{
+    color: var(--orange);
+    font-size: 1.5em;
+    font-family: var(--courier);
+}
+
+.komentar h2{
+    font-size: 2.3em;
+    font-family: var(--courier);
+    letter-spacing: 2px;
+    margin: 5px 0;
+    color: var(--hitam);
+}
+
+.komentar .row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.komentar .row .col{
+    width: 30%;
+    margin-top: 20px;
+}
+
+.komentar .card{
+    border: 2px solid var(--abu);
+    padding: 20px;
+    border-radius: 7px;
+    position: relative;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.komentar .card:hover{
+    background-color: var(--orange);
+}
+
+.fa-star, .fa-star-half-stroke{
+    transition: 1s ease all;
+}
+
+.komentar .card:hover .fa-star,
+.komentar .card:hover .fa-star-half-stroke{
+    color: var(--hitam);
+}
+
+.komentar .card:hover .fa-quote-right{
+    color: var(--hitam);
+}
+
+.komentar .card .box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.komentar .card .box .col{
+   margin-right: 20px;
+}
+
+.komentar .card .box .right{
+    width: 60%;
+}
+.komentar .card .box .col strong{
+   font-size: 1.2em;
+   color: var(--hitam);
+}
+
+.komentar .card .box .col .gambar{
+width: 100px;
+height: 100px;
+}
+
+.komentar .card .box .col .gambar img{
+width: 100%;
+height: 100%;
+border-radius: 50%;
+}
+
+.komentar .card .deskripsi{
+    margin-top: 10px;
+}
+
+.komentar .card .deskripsi p{
+   font-size: 1.1em;
+   color: var(--hitam);
+}
+
+.fa-quote-right{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 3em;
+    color: var(--orange);
+    transition: 1s ease all;
+}
+/* komentar finished */
+
+
+/* our team started */
+.team{
+    padding: 50px;
+    background-color: var(--abu);
+}
+.team .teamTitle{
+    text-align: center;
+    padding: 30px;
+}
+
+.team .teamTitle strong{
+    color: var(--orange);
+    font-size: 1.5em;
+    font-family: var(--courier);
+}
+
+.team h2{
+    font-size: 2.3em;
+    font-family: var(--courier);
+    letter-spacing: 2px;
+    margin: 5px 0;
+    color: var(--hitam);
+}
+
+.team .row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.team .row .col{
+    width: 30%;
+    margin-top: 30px;
+}
+
+.team .row .col .card .gambar{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.team .row .col .card{
+    border: 2px solid var(--abu);
+    background-color: var(--putih);
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s ease all;
+    position: relative;
+    border-top: 3px solid var(--orange);
+}
+
+.team .row .col .icons{
+    position: absolute;
+}
+
+.team .row .col .icons .icon{
+    font-size: 1.5em;
+    color: var(--orange);
+    transition: 1s ease all;
+}
+
+.team .row .col .icons .icon:hover{
+    transform: rotate(360deg);
+}
+
+.team .row .col .icons{
+    position: absolute;
+}
+
+.team .row .col .titik .img img{
+    width: 100%;
+    height: 100%;
+}
+
+.team .row .col .card:hover{
+    background-color: var(--orange);
+    border-top: 2px solid var(--putih);
+}
+
+.team .row .col .card:hover .icons .icon{
+    color: var(--putih);
+}
+
+.team .row .col .card:hover .gambar img{
+    border: 3px solid var(--putih);
+}
+.team .row .col .card:hover{
+    background-color: var(--orange);
+}
+
+.team .row .col .card:hover strong ,
+.team .row .col .card:hover p
+{
+    color: var(--putih);
+}
+
+.team .row .col .card .gambar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--orange);
+    transition: 1s ease all;
+}
+
+.team .row .col .card strong{
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    margin: 5px 0;
+    color: var(--hitam);
+    transition: 1s ease all;
+}
+
+.team .row .col .card .master{
+    text-align: center;
+    font-size: 1.3em;
+    color: var(--hitam);
+    transition: 1s ease all;
+}
+
+.team .row .col .card .des{
+    font-size: 1.2em;
+    line-height: 20px;
+    margin-top: 10px;
+    color: var(--hitam);
+    transition: 1s ease all;
+}
+
+/* our team finished */
+
+/* galeries started */
+.galeris{
+    padding: 50px;
+    background-color: var(--putih);
+}
+.galeris .galerisTitle{
+    text-align: center;
+    padding: 30px;
+}
+
+.galeris .galerisTitle strong{
+    color: var(--orange);
+    font-size: 1.5em;
+    font-family: var(--courier);
+}
+
+.galeris h2{
+    font-size: 2.3em;
+    font-family: var(--courier);
+    letter-spacing: 2px;
+    margin: 5px 0;
+    color: var(--hitam);
+}
+
+.galeris .row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.galeris .row .col{
+    width: 49%;
+}
+
+.galeris .row .col .gambar{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.galeris .row .col .gambar img{
+    width: 100%;
+    border-right: 9px solid var(--abu);
+    border-bottom: 9px solid var(--abu);
+    height: 100%;
+}
+
+.galeris .box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.galeris .box .col{
+    width: 32.5%;
+}
+
+.galeris .box .col .gambar{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.galeris .box .col .gambar img{
+    width: 100%;
+    border-right: 9px solid var(--abu);
+    border-bottom: 9px solid var(--abu);
+    height: 100%;
+}
+
+.galeris .box-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.galeris .box-row .col{
+    width: 19.2%;
+}
+
+.galeris .box-row .col .gambar{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.galeris .box-row .col .gambar img{
+    width: 100%;
+    border-right: 9px solid var(--abu);
+    border-bottom: 9px solid var(--abu);
+    height: 100%;
+}
+/* galeries finished */
+
+/* footer started */
+footer{
+    background-color:var(--abu);
+    padding: 30px;
+}
+footer .row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+footer .row .col{
+    width: 30%;
+    margin-top: 20px;
+}
+
+footer .row .col .gambar{
+    width: 100%;
+}
+
+footer h1{
+    color: var(--hitam);
+    font-size: 3em;
+    text-shadow: 1px 2px 3px rgba(0,0,0,.1);
+}
+
+footer .row .col .gambar img{
+    width: 100%;
+}
+
+footer .row .col .footerAbout a{
+    display:block;
+    margin-top: 10px;
+    font-size: 1.3em;
+    text-decoration: none;
+    transition: 1s ease all;
+    padding: 10px;
+    color: var(--hitam);
+}
+
+footer .row .col p{
+    font-size: 1.3em;
+    color: var(--hitam);
+}
+
+footer .row .col strong{
+    font-size: 1.5em;
+    color: var(--hitam);
+}
+
+footer .row .col .footerAbout a:hover{
+    background-color: var(--orange);
+    color: var(--putih);
+}
+
+footer .sosmed{
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+footer .sosmed:hover .fa-facebook-square,
+footer .sosmed:hover .fa-instagram-square,
+footer .sosmed:hover .fa-whatsapp-square
+{
+    transform: rotate(360deg);
+}
+
+footer .fa-facebook-square, footer .fa-instagram-square , footer .fa-whatsapp-square{
+    color: var(--orange);
+    transition: 1s ease all;
+}
+
+footer .sosmed a{
+    text-decoration: none;
+    color: var(--hitam);
+}
+/* footer finished */
+
+
+@media screen and (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 15px 20px;
+    }
+
+    .popular .row .col{
+        width: 45%;
+        text-align: center;
+    }
+
+    .popular .row .col .card .left{
+        width: 50%;
+    }
+    
+    .popular .row .col .card .right{
+        width: 50%;
+    }
+
+    .fullMenu .showAll{
+        padding: 30px;
+    }
+    
+    .fullMenu .showAll .row {
+        flex-wrap: wrap;
+    }
+    .fullMenu .showAll .row .col{
+        width: 40%;
+    }
+
+    .komentar .card .box{
+        flex-wrap: wrap;
+    }
+
+    .komentar .row .col .card .box{
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .komentar .row .col{
+        width: 40%;
+    }
+
+    .komentar .row .col .card .box .right{
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .row .col{
+        width: 40%;
+    }
+
+    .team .row .col {
+        width: 45%;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    header .fa-bars{
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    header .navbarList{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--putih);
+        border-top: 4px solid rgba(0,0,0,.1);
+        border-bottom: 4px solid rgba(0,0,0,.1);
+        padding: 10px;
+        clip-path: polygon(0 0 , 100% 0 , 100% 0 ,0 0);
+        transition: .7s ease all;
+    }
+
+    header .navbarList.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,0% 100%);
+    }
+
+    header .navbarList a{
+        display: block;
+        margin: 20px;
+        padding: 10px;
+        font-size: 1.7em;
+        background-color: var(--abu);
+    }
+
+    .benner .row{
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .benner .row .col-left{
+        width: 100%;
+    }
+    
+    .benner .row .col-right{
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .popular .row .col{
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .popular .row .col .card .left{
+        width: 60%;
+    }
+    
+    .popular .row .col .card .right{
+        width: 40%;
+    }
+
+    .popular{
+        padding: 10px;
+    }
+
+    .about .row{
+        flex-wrap: wrap;
+    }
+
+    .about main{
+        width: 100%;
+    }
+
+    .about .aside{
+        width: 100%;
+    }
+
+    .fullMenu .showAll{
+        padding: 20px;
+    }
+
+    .fullMenu .showAll .row {
+        flex-wrap: wrap;
+    }
+    .fullMenu .showAll .row .col{
+        width: 80%;
+    }
+
+    .komentar .row .col .card .box .col .gambar{
+        margin: 0 auto;
+    }
+
+    .komentar .card .box{
+        flex-wrap: wrap;
+    }
+
+    .komentar .row .col{
+        width: 100%;
+    }
+
+    .komentar .row .col .card .box .right{
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .row .col{
+        width: 100%;
+    }
+
+    .benner .gambar .benner-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    .benner h1{
+        font-size: 3em;
+    }
+    
+    .benner h2{
+        font-size: 4em;
+    }
+    
+    .benner a{
+        font-size: 1.3em;
+    }
+    
+    .benner strong{
+        font-size: 1.5em;
+    }
+    
+    .benner p{
+        font-size: 1.3em;
+    }
+
+    .team .row .col {
+        width: 80%;
+    }
+
+    .galeris{
+        padding: 15px;
+    }
+
+    .galeris .row{
+        flex-wrap: wrap;
+    }
+
+    .galeris .row .col{
+        width: 100%;
+    }
+
+    .galeris .box{
+        flex-wrap: wrap;
+    }
+
+    .galeris .box .col{
+        width: 100%;
+    }
+
+    .galeris .box-row{
+        flex-wrap: wrap;
+    }
+
+    .galeris .box-row .col{
+        width: 100%;
+    }
+
+    .galeris .box .col .gambar{
+        height: 350px;
+    }
+
+    .galeris .box .col .gambar img{
+        height: 100%;
+    }
+
+    .galeris .box-row .col .gambar{
+        height: 350px;
+    }
+
+    .galeris .box-row .col .gambar img{
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width:551px){
+    html{
+        font-size:55%;
+    }
+
+    .fullMenu .showAll{
+        padding: 10px;
+    }
+
+    .fullMenu .row {
+        flex-wrap: wrap;
+    }
+    .fullMenu .row .col{
+        width: 80%;
+    }
+
+    .fullMenu .row .col .card .under a{
+    padding: 7px 10px;
+    margin-left: 10px;
+    }
+
+    .about main .box .col{
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .about main .box a{
+        width: 100%;
+        display: block;
+        border: 1px solid rgba(0,0,0,.1);
+        background-color: var(--abu);
+        text-decoration: none;
+        color: var(--orange);
+        border-radius: 7px;
+        text-align: center;
+        transition: 1s ease all;
+    }
+
+
+    .benner .gambar .benner-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+    }
+    
+    .benner h1{
+        font-size: 3em;
+    }
+    
+    .benner h2{
+        font-size: 4em;
+    }
+    
+    .benner a{
+        font-size: 1.3em;
+    }
+    
+    .benner strong{
+        font-size: 1.5em;
+    }
+    
+    .benner p{
+        font-size: 1.3em;
+    }
+
+    .team{
+        padding: 15px;
+    }
+
+    .team .row .col .card .gambar{
+        width: 100px;
+        height: 100px;
+    }
+
+    .team .row .col .card .gambar img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .team .row .col {
+        width: 100%;
+    }
+
+    .galeris{
+        padding: 15px;
+    }
+
+    .galeris .row{
+        flex-wrap: wrap;
+    }
+
+    .galeris .row .col{
+        width: 100%;
+    }
+
+    .komentar{
+        padding: 20px 20px;
+    }
+
+    .galeris .box{
+        flex-wrap: wrap;
+    }
+
+    .galeris .box .col{
+        width: 100%;
+    }
+
+    .galeris .box-row{
+        flex-wrap: wrap;
+    }
+
+    .galeris .box-row .col{
+        width: 100%;
+    }
+
+    .about .aboutText{
+        position: absolute;
+        top: 30px;
+        left: 20px;
+    }
+
+    .about .aboutText h2,.about .textRestaurant h2{
+        font-size: 1.5em;
+    }
+
+    .about .aboutText h1,.about .textRestaurant h1{
+        font-size:2em;
+    }
+
+    .about .textRestaurant{
+        position: absolute;
+       top: 70px;
+        right: 20px;
+    }
+}
+
+
